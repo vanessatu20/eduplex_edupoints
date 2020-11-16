@@ -1,3 +1,9 @@
+## Eduplex-EduPoints
+
+This is part of a big project of EduPlex, an educational platform that creates a community for students. Students can share study materials and post discussions on This platform.
+
+<img src='Screenshot.png' title='Screenshot' width='700' alt='Screenshot' />
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
