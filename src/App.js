@@ -7,7 +7,6 @@
 	import ListItemIcon from '@material-ui/core/ListItemIcon';
 	import Button from '@material-ui/core/Button';
 	import { makeStyles } from '@material-ui/core/styles';
-	import BlueCheckIcon from './blue-check.svg';
 	import AddPostIcon from './add-post.svg';
 	import CreateCourseIcon from './create-course.svg';
 	import ReceiveCommentIcon from './receive-comment.svg';
@@ -50,7 +49,6 @@
 	},
 	list1: {
 		backgroundColor: '#ffffff',
-		marginRight: theme.spacing(6),
 		marginLeft: '13%',
 		paddingTop: theme.spacing(4),
 		paddingBottom: theme.spacing(4),
@@ -61,10 +59,6 @@
 		padding: 10,
 		borderRadius: '0px 0px 5px 5px',
 	},
-	twoLists: {
-		width: '100%',
-		justifyContent: 'center',
-	},
 	blueBar1: {
 		height: 10,
 		backgroundColor: '#0088D7',
@@ -72,15 +66,6 @@
 		marginRight: theme.spacing(6),
 		marginLeft: '13%',
 		borderRadius: '5px 5px 0px 0px',
-	},
-	blueBar2: {
-		height: 10,
-		backgroundColor: '#0088D7',
-		marginTop: -10,
-		borderRadius: '5px 5px 0px 0px',
-	},
-	blueCheck: {
-		marginTop: 5,
 	},
 	icons: {
 		marginLeft: 30,
@@ -156,30 +141,6 @@
 		)
 		});
 
-		const premiumList = [
-		"Unlimited access to all study materials",
-		"Download as many documents as you like",
-		"Cancel subscription anytime!"
-		];
-
-		const premiumListComponent = premiumList.map((name, i) => {
-		return (
-			<ListItem>
-			<Grid container>
-				<Grid item xs={2}>
-				<ListItemIcon>
-					<img src={BlueCheckIcon} alt="" height="20" className={classes.blueCheck}/>
-				</ListItemIcon>
-				</Grid>
-				<Grid item xs={9}>
-				<ListItemText>
-					{premiumList[i]}
-				</ListItemText>
-				</Grid>
-			</Grid>
-			</ListItem>
-		)
-		});
 		
 		return (
 		<div className={classes.root}>
@@ -187,22 +148,20 @@
 			container
 			direction="column"
 			alignItems="center">
-			<Grid item lg={12}>
-				<Typography variant="h1" className={classes.title}> 
-					How Do EduPoints Work?            
-				</Typography>
-			</Grid>
-			<Grid item lg={12}>
-				<Typography variant="h3" className={classes.subtitle}>
-				Earn EduPoints and Start Downloading Study Materials
-				</Typography>
-			</Grid>
+				<Grid item lg={12}>
+					<Typography variant="h1" className={classes.title}> 
+						How Do EduPoints Work?            
+					</Typography>
+				</Grid>
+				<Grid item lg={12}>
+					<Typography variant="h3" className={classes.subtitle}>
+					Earn EduPoints and Start Downloading Study Materials
+					</Typography>
+				</Grid>
 		
-			<Grid item className={classes.twoLists}>
-				<Grid container>
-				<Grid item md={5} className={classes.blueBar1}></Grid>
-				<Grid item md={3} className={classes.blueBar2}></Grid>
-				<Grid item md={5} className={classes.list1}>
+			<Grid container>
+				<Grid item md={9} className={classes.blueBar1}></Grid>
+				<Grid item md={9} className={classes.list1}>
 					<List>
 					{methodListComponent}
 					</List>
@@ -216,25 +175,6 @@
 						Upload
 					</Button>
 					
-				</Grid>
-				<Grid item md={3} className={classes.list2}>
-					<List>
-					<ListItem>
-						<ListItemText>
-						OR BECOME PREMIUM NOW!
-						</ListItemText>
-					</ListItem>
-					{premiumListComponent}
-					</List>
-					
-					<Button 
-					variant="contained"
-					disableElevation
-					className={`${classes.buttons} ${classes.upgradeButton}`}
-					>
-						Upgrade
-					</Button>
-				</Grid>
 				</Grid>
 			</Grid>
 			</Grid>
